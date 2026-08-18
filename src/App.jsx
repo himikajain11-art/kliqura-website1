@@ -8,14 +8,14 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import Home from "./pages/home";
-import About from "./pages/about";
-import Services from "./pages/services";
-import Work from "./pages/work";
-import Blog from "./pages/blog";
-import Contact from "./pages/contact";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Work from "./Pages/Work";
+import Blog from "./Pages/Blog";
+import Contact from "./Pages/Contact";
 
 import "./App.css";
+import Services from "./Pages/Services"; 
 
 function App() {
   return (
