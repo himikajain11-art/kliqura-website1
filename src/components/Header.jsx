@@ -1,53 +1,46 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import logo from "../assets/kliqura-logo.png";
 
 function Header() {
   return (
-    <header className="site-header">
-      <nav className="navbar">
+    <>
+      <div className="top-bar">
+        <div className="container top-bar-inner">
+          <span>
+            KLIQURA — DIGITAL MARKETING THAT MAKES IT CLICK.
+          </span>
 
-        {/* KLIQURA LOGO */}
-        <Link to="/" className="logo-link">
-          <img
-            src={logo}
-            alt="KLIQURA - We Make It Click"
-            className="navbar-logo"
-          />
-        </Link>
-
-        {/* NAVIGATION */}
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-
-          <Link to="/about">
-            About
-          </Link>
-
-          <Link to="/services">
-            Services
-          </Link>
-
-          <Link to="/work">
-            Work
-          </Link>
-
-          <Link to="/blog">
-            Blog
-          </Link>
-
-          <Link to="/contact">
-            Contact
-          </Link>
+          <span className="top-bar-right">
+            Strategy • Content • Social • Growth
+          </span>
         </div>
+      </div>
 
-        {/* CONTACT BUTTON */}
-        <Link to="/contact" className="nav-btn">
-          Let's Talk <span>↗</span>
-        </Link>
+      <header className="main-header">
+        <div className="container nav-inner">
 
-      </nav>
-    </header>
+          <Link to="/" className="brand-logo">
+            <img src={logo} alt="KLIQURA" />
+          </Link>
+
+          <nav className="desktop-nav">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/work">Work</Link>
+            <Link to="/blog">Blog</Link>
+          </nav>
+
+          <Link to="/contact" className="header-cta">
+            Let's Talk
+            <span>↗</span>
+          </Link>
+
+        </div>
+      </header>
+    </>
   );
 }
 

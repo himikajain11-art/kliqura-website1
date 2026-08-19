@@ -1,73 +1,39 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import Services from "./Pages/Services";
 import Work from "./Pages/Work";
 import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 
 import "./App.css";
-import Services from "./Pages/Services"; 
 
 function App() {
   return (
     <BrowserRouter>
+      <div className="kliqura-site">
 
-      {/* HEADER */}
-      <Header />
+        <Header />
 
-      {/* SEPARATE PAGES */}
-      <Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
 
-        {/* HOME */}
-        <Route
-          path="/"
-          element={<Home />}
-        />
+        <Footer />
 
-        {/* ABOUT */}
-        <Route
-          path="/about"
-          element={<About />}
-        />
-
-        {/* SERVICES */}
-        <Route
-          path="/services"
-          element={<Services />}
-        />
-
-        {/* WORK */}
-        <Route
-          path="/work"
-          element={<Work />}
-        />
-
-        {/* BLOG */}
-        <Route
-          path="/blog"
-          element={<Blog />}
-        />
-
-        {/* CONTACT */}
-        <Route
-          path="/contact"
-          element={<Contact />}
-        />
-
-      </Routes>
-
-      {/* FOOTER */}
-      <Footer />
-
+      </div>
     </BrowserRouter>
   );
 }
